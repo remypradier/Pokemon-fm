@@ -38,19 +38,9 @@ body
 	display: block;
 }
 
-.play
-{
-	position: absolute;
-	top: 81.3%;
-	left: 16.8%;
-	font-size: 2em;
-	color: #fff;
-	padding: 1.7%;
-	cursor: pointer;
-	background: none;
-	border: none;
-}
 
+
+/*Player audio*/
 .player
 {
 	width: 23.8%;
@@ -100,6 +90,7 @@ body
     cursor: pointer;
 }
 
+/*Volume*/
 .volume {
 	vertical-align: bottom;
 	display: inline-block;
@@ -151,6 +142,50 @@ body
 {
     height: 25px;
     left: 36px;
+}
+
+/*Bouton play*/
+.play
+{
+	position: absolute;
+	top: 81.3%;
+	left: 16.8%;
+	font-size: 2em;
+	color: #fff;
+	padding: 1.7%;
+	cursor: pointer;
+	background: none;
+	border: none;
+}
+
+/*Suivant / Précédent*/
+
+.move-music
+{
+	position: absolute;
+	top: 83.3%;
+	left: 37.2%;
+	width: 8.5%;
+	height: 5.5%;
+}
+
+.backward, .forward
+{
+	font-size: 2.5em;
+	margin: 0 5%;
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+.backward
+{
+	float: left;
+}
+
+.forward
+{
+	float: right;
 }
 
 .tableau
