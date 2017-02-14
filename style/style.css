@@ -58,7 +58,7 @@ body
 	position: absolute;
 	top: 27%;
 	left: 19.5%;
-	background: red;
+	/*background: red;*/
 	height: 45%;
 	border-radius: 11.5%;
 }
@@ -160,56 +160,56 @@ position: absolute;
 top: 11.3%;
 left: 56.6%;
 width: 24.2%;
-background: red;
+/*background: red;*/
 border-radius: 14%;
 max-height: 80%;
 }
 
-		table, th, td 
-		{
-			border: 1px solid lightgrey;
-			border-collapse: collapse;
-			margin: 6%;
-		}
-		/*
-		table
-		{
-			width: 21.9%;
-			left: 56.3%;
-			top: 90px;
-			position: relative;
+table, th, td 
+{
+	border: 1px solid lightgrey;
+	border-collapse: collapse;
+	margin: 6%;
+}
+/*
+table
+{
+	width: 21.9%;
+	left: 56.3%;
+	top: 90px;
+	position: relative;
 
-		
+
 }*/
-		table img
-		{
-			width: 50%;
-		}
+table img
+{
+	width: 50%;
+}
 
-		tbody
-		{
-			
-			
-			display: block;
-			height: 670px; /* a modifier*/
-			overflow-y: scroll;
-		}
+tbody
+{
 
-		td
-		{
-			width: 20%;
-			color: #fff;
-			padding: 0.3%;
-			text-align: center;
-			font-size: 22px;
-		}
-		
-		tr
-		{
-			background: grey;
-		}
 
-		tr:nth-child(2n+1)
-		{
-			background: darkgrey;
-		}
+	display: block;
+	height: 670px; /* a modifier*/
+	overflow-y: scroll;
+}
+
+td
+{
+	width: 20%;
+	color: #fff;
+	padding: 0.3%;
+	text-align: center;
+	font-size: 22px;
+}
+
+tr
+{
+	background: grey;
+}
+
+tr:nth-child(2n+1)
+{
+	background: darkgrey;
+}
