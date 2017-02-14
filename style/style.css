@@ -20,6 +20,11 @@
 	clear: both;
 }
 
+.desactive
+{
+	display: none;
+}
+
 body 
 {
 	position:absolute; 
@@ -186,6 +191,11 @@ body
 .forward
 {
 	float: right;
+}
+
+.play:hover, .backward:hover, .forward:hover
+{
+	color: #ccc;
 }
 
 .tableau
