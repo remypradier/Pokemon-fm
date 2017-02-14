@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Pokemon fm</title>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" href="style/font-awesome.min.css">
+	<script type="text/javascript" src="js/script.js"></script>
+	<script src="json/data.json"></script>
+</head>
+<body>
+	<div class='tableau'>
+		<script type="text/javascript">
+			
+			var chemin = "song/";
+			var chemin_img = "img/";
+			var musique = [];
+			var numero = 0;
+
+			//Crée le tableau HTML
+			function afficher()
+			{
+				document.writeln("<table id='tableau'>");
+				for(var i = 0; i < playlist.length; i++)
+				{
+					document.writeln("<tr><td>" + "<a href='"+ chemin +"'>" + playlist[i].nom + "</a></td><td>" + playlist[i].duree + "</td><td><img class='img_tableau' src='" + chemin_img + playlist[i].chemin_img + "'>"+ "</td><td class='mp3' id='mp3'>" + playlist[i].chemin + "</td></tr>"); 
+				}
+				document.writeln("</table>");
+			}
+			afficher();	
+		</script>
+	</div>
+
+	<img src="img/pokedex.svg" class="pokedex">
+
+	<div class="player">
+		<img src="img/kanto.png" class="img_player">
+		<audio id="audioPlayer" ontimeupdate="update(this)">
+		</audio>
+
+		<div class="lecture">
+			<span id="progressTime">0:00</span>
+			<div id="progressBarControl">
+		   		<div id="progressBar" onclick="clickProgress('audioPlayer', this, event)">.</div>
+			</div>
+			
+			<span class="volume">
+			    <a class="stick1" onclick="volume('audioPlayer', 0)"></a>
+			    <a class="stick2" onclick="volume('audioPlayer', 0.3)"></a>
+			    <a class="stick3" onclick="volume('audioPlayer', 0.5)"></a>
+			    <a class="stick4" onclick="volume('audioPlayer', 0.7)"></a>
+			    <a class="stick5" onclick="volume('audioPlayer', 1)"></a>
+			</span>
+		</div>
+		
+
+	</div>
+
+	<button class="control play" onclick="play('audioPlayer', this)">
+		<i class="fa fa-play" id="play" aria-hidden="true"></i>
+		<!--<i class="fa fa-pause" id="pause" aria-hidden="true"></i>-->
+	</button>
+	
+
+</body>
+</html>

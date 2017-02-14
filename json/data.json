@@ -1,0 +1,18 @@
+var playlist = [
+	{
+	    nom: "Azuria & Parmanie - kanto",
+		duree: "1.18",
+		chemin: "test.mp3",
+		chemin_img: "kanto.png",
+		gen: "kanto",
+        numero: "1"
+	},
+	{
+	    nom: "Bourg Palette - kanto",
+		duree: "1.18",
+		chemin: "test2.mp3",
+		chemin_img: "kanto.png",
+		gen: "kanto",
+        numero: "2"
+	}
+]

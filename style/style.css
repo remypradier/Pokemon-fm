@@ -1,0 +1,215 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+*, *:before, *:after
+{
+	box-sizing: border-box;
+}
+
+.clearfix:before, .clearfix:after
+{
+	content: " ";
+	display: table;
+}
+
+.clearfix:after
+{
+	clear: both;
+}
+
+body 
+{
+	position:absolute; 
+	top:0; 
+	bottom:0; 
+	right:0; 
+	left:0;
+	background: #ddd;
+	color: #fff;
+}
+
+.pokedex
+{
+	height: 95%;
+	margin: 1.5% auto 0 auto;
+	display: block;
+}
+
+.play
+{
+	position: absolute;
+	top: 81.3%;
+	left: 16.8%;
+	font-size: 2em;
+	color: #fff;
+	padding: 1.7%;
+	cursor: pointer;
+	background: none;
+	border: none;
+}
+
+.player
+{
+	width: 23.8%;
+	float: left;
+	position: absolute;
+	top: 27%;
+	left: 19.5%;
+	background: red;
+	height: 45%;
+	border-radius: 11.5%;
+}
+
+.img_player
+{
+    width: 70%;
+    margin: 5% 15%;
+}
+
+.lecture
+{
+	position: absolute;
+	top: 85%;
+	margin: 0 auto;
+	width: 80%;
+	left: 10%;
+}
+
+#progressBarControl 
+{
+    width: 210px;
+    height: 15px;
+    border: 1px solid #aaa;
+    border-radius: 2px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+#progressBar {
+    width: 0px;
+    background: #ebebeb;
+    height: 15px;
+    text-align: right;
+    line-height: 15px;
+    font-size: 9px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.volume {
+	vertical-align: bottom;
+	display: inline-block;
+	height: 25px;
+	white-space: nowrap;
+	position: relative;
+	width: 45px;
+	float: right;
+}
+
+.volume a {
+    display: inline-block;
+    background: #ebebeb;
+    width: 8px;
+    vertical-align: bottom;
+    margin-left: 0px;
+    margin-right: 0px;
+    cursor: pointer;
+    border-left: 1px solid #fff;
+    position: absolute;
+    bottom: 0;
+}
+
+.stick1 
+{
+    height: 5px;
+    left: 0px;
+}
+
+.stick2 
+{
+    height: 10px;
+    left: 9px;
+}
+
+.stick3 
+{
+    height: 15px;
+    left: 18px;
+}
+
+.stick4 
+{
+    height: 20px;
+    left: 27px;
+}
+
+.stick5 
+{
+    height: 25px;
+    left: 36px;
+}
+
+.tableau
+{
+
+position: absolute;
+top: 11.3%;
+left: 56.6%;
+width: 24.2%;
+background: red;
+border-radius: 14%;
+max-height: 80%;
+}
+
+		table, th, td 
+		{
+			border: 1px solid lightgrey;
+			border-collapse: collapse;
+			margin: 6%;
+		}
+		/*
+		table
+		{
+			width: 21.9%;
+			left: 56.3%;
+			top: 90px;
+			position: relative;
+
+		
+}*/
+		table img
+		{
+			width: 50%;
+		}
+
+		tbody
+		{
+			
+			
+			display: block;
+			height: 670px; /* a modifier*/
+			overflow-y: scroll;
+		}
+
+		td
+		{
+			width: 20%;
+			color: #fff;
+			padding: 0.3%;
+			text-align: center;
+			font-size: 22px;
+		}
+		
+		tr
+		{
+			background: grey;
+		}
+
+		tr:nth-child(2n+1)
+		{
+			background: darkgrey;
+		}
