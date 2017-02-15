@@ -1,4 +1,3 @@
-
 var track = 0;
 var player = document.querySelector('#audioPlayer');
 
@@ -6,27 +5,23 @@ function play(idPlayer, control)
 {
     var player = document.querySelector('#' + idPlayer);
 	console.log(track);
-
+    /*
     console.log("play" + player.innerHTML);
     if(player.innerHTML.trim() == "")
     {
         player.innerHTML = " <source src=" + chemin + playlist[track].chemin +" type='audio/ogg'>";
         console.log("trim" + player.innerHTML);
     }
-    else
-    {
-        if (player.paused) 
-        {
-            player.play();
-            //track++;
-
-        } 
-        else 
-        {
-            player.pause(); 
-        }
-    }
+    */
     
+    if (player.paused) 
+    {
+        player.play();
+    } 
+    else 
+    {
+        player.pause(); 
+    }
 }
 
 function volume(idPlayer, vol) 
@@ -112,18 +107,16 @@ function clickProgress(idPlayer, control, event)
 
 function backward(idPlayer) 
 {
-   var player = document.querySelector('#' + idPlayer);
-    
-    player.innerHTML = " <source src=" + chemin + playlist[track--].chemin +" type='audio/ogg'>";//A corriger
-    console.log("back" + player.innerHTML);
-    //play('audioPlayer', this);
+    var player = document.querySelector('#' + idPlayer);
+    track--;
+    player.innerHTML = " <source src=" + chemin + playlist[track].chemin +" type='audio/ogg'>";//A corriger
+    play('audioPlayer', this);
 }
 
 function forward(idPlayer) 
 {
     var player = document.querySelector('#' + idPlayer);
-    
-    player.innerHTML = " <source src=" + chemin + playlist[track++].chemin +" type='audio/ogg'>";//A corriger
-    console.log("for" + player.innerHTML);
-    //play('audioPlayer', this);
+    track++;
+    player.innerHTML = " <source src=" + chemin + playlist[track].chemin +" type='audio/ogg'>";//A corriger
+    play('audioPlayer', this);
 }
