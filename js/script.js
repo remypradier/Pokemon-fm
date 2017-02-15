@@ -13,6 +13,7 @@ function play(idPlayer, control)
         console.log("trim" + player.innerHTML);
     }
     */
+    
     if (player.paused) 
     {
         player.play();
