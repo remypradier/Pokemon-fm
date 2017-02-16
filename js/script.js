@@ -1,4 +1,6 @@
 var track = 0;
+var maxtrack = 10;
+
 var player = document.querySelector('#audioPlayer');
 
 function play(idPlayer, control) 
@@ -13,10 +15,13 @@ function play(idPlayer, control)
         console.log("trim" + player.innerHTML);
     }
     */
-    
+
     if (player.paused) 
     {
-        player.play();
+            player.src = chemin + playlist[track].chemin;
+            player.load();
+            player.play(); 
+
     } 
     else 
     {
@@ -109,7 +114,8 @@ function backward(idPlayer)
 {
     var player = document.querySelector('#' + idPlayer);
     track--;
-    player.innerHTML = " <source src=" + chemin + playlist[track].chemin +" type='audio/ogg'>";//A corriger
+    //player.innerHTML = " <source src=" + chemin + playlist[track].chemin +" type='audio/ogg'>";//A corriger
+    player.src = chemin + playlist[track].chemin;
     play('audioPlayer', this);
 }
 
@@ -117,6 +123,21 @@ function forward(idPlayer)
 {
     var player = document.querySelector('#' + idPlayer);
     track++;
-    player.innerHTML = " <source src=" + chemin + playlist[track].chemin +" type='audio/ogg'>";//A corriger
+    //player.innerHTML = " <source src=" + chemin + playlist[track].chemin +" type='audio/ogg'>";//A corriger
+    player.src = chemin + playlist[track].chemin;
     play('audioPlayer', this);
+}
+
+function autoplay(idPlayer)
+{
+    var player = document.querySelector('#' + idPlayer);
+    while(track <= maxtrack)
+    {
+        player.src = chemin + playlist[track].chemin;
+        player.load();
+        player.play(); 
+        
+        track++;
+    }
+
 }

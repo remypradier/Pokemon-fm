@@ -38,7 +38,7 @@
 	<div class="player">
 		<img src="img/kanto.png" class="img_player">
 		<audio id="audioPlayer" ontimeupdate="update(this)">
-			<script>document.writeln("<source src=" + chemin + playlist[track].chemin + " type='audio/ogg'>")</script>
+			<!--<script>document.writeln("<source src=" + chemin + playlist[track].chemin + " type='audio/ogg'>")</script>-->
 		</audio>
 
 		<div class="lecture">
@@ -70,5 +70,7 @@
 			<i class="fa fa-step-forward" aria-hidden="true"></i>
 		</button>
 	</div>
+
+	<button onclick="autoplay('audioPlayer', this)"></button>
 </body>
 </html>
