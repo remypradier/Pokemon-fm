@@ -62,7 +62,7 @@ body
     position: absolute;
     top: 28%;
     left: 21%;
-    background: red;
+    /*background: red;*/
     height: 44%;
     border-radius: 11.5%;
 }
@@ -219,7 +219,7 @@ body
 	top: 14%;
 	left: 56.3%;
 	width: 22.8%;
-	background: red;
+	/*background: red;*/
 	border-radius: 14%;
 	max-height: 72.5%;
 }
