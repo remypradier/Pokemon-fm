@@ -223,7 +223,7 @@ body
 	max-height: 72.5%;
 }
 
-.mp3
+.mp3, .img_tableau
 {
 	display: none;
 }
@@ -233,17 +233,9 @@ table, th, td
 {
 	border: 1px solid lightgrey;
 	border-collapse: collapse;
+	width: 88%;
 	margin: 6%;
 }
-
-/*
-table
-{
-	width: 21.9%;
-	left: 56.3%;
-	top: 90px;
-	position: relative;
-}*/
 
 table img
 {
@@ -252,20 +244,19 @@ table img
 
 tbody
 {
-	
-	
 	display: block;
-	height: 670px; /* a modifier*/
+	max-height: 670px; /* a modifier*/
 	overflow-y: scroll;
 }
 
 td
 {
-	width: 20%;
+	width: 65%;
 	color: #fff;
 	padding: 0.3%;
 	text-align: center;
 	font-size: 22px;
+
 }
 
 tr
