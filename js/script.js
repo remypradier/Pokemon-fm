@@ -99,7 +99,8 @@ function getPosition(element)
 {
     var top = 0, left = 0;
     
-    do {
+    do 
+    {
         top  += element.offsetTop;
         left += element.offsetLeft;
     } while (element = element.offsetParent);
@@ -149,7 +150,6 @@ function autoplay(idPlayer)
         
         track++;
     }
-
 }
 
 //Changer de generation

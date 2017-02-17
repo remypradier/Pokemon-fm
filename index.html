@@ -122,7 +122,7 @@
 			console.log(playlist);
 			for(var i = 0; i < playlist.length; i++)
 			{			
-			music_playlist.innerHTML += "<tr><td>" + "<a href='"+ chemin +"'>" + playlist[i].nom + "</a></td><td>" + playlist[i].duree + "</td><td><img class='img_tableau' src='" + chemin_img + playlist[i].chemin_img + "'>"+ "</td><td class='mp3' id='mp3'>" + playlist[i].chemin + "</td></tr>";
+			music_playlist.innerHTML += "<tr><td>" + "<a href='"+ chemin +"'>" + playlist[i].nom + "</a></td><td>" + playlist[i].duree + "</td><td class='img_tableau'><img src='" + chemin_img + playlist[i].chemin_img + "'>"+ "</td><td class='mp3' id='mp3'>" + playlist[i].chemin + "</td></tr>";
 			}
 		}
 		tabtab();
