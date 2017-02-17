@@ -11,15 +11,15 @@
 <body>
 	<div class='tableau'>
 		<script type="text/javascript">
-			
 			var chemin = "song/";
 			var chemin_img = "img/";
-			var musique = [];
-			var numero = 0;
-			//console.log(chemin + playlist[0].chemin);
+			var num_playlist = 0;
 
+			var playlists = [kanto, hoenn, sinnoh, johto];
+			var playlist = playlists[num_playlist];
 
 			//Crée le tableau HTML
+			
 			function afficher()
 			{
 				document.writeln("<table id='tableau'>");
@@ -29,23 +29,27 @@
 				}
 				document.writeln("</table>");
 			}
-			afficher();	
+
+			afficher();
+			
+
 		</script>
 	</div>
-
+	
+	<h1 class='playlist_nom' id='playlist_nom'>Aucune playlist sélectionnée</h1>;
 	<img src="img/pokedex.svg" class="pokedex">
 
 	<div class="player">
-		<img src="img/kanto.png" class="img_player">
-		<audio id="audioPlayer" ontimeupdate="update(this)">
-			<!--<script>document.writeln("<source src=" + chemin + playlist[track].chemin + " type='audio/ogg'>")</script>-->
-		</audio>
+		<h2 class="title_player" id="title_player">Aucune musique sélectionnée</h2>
+		<img src="img/default.png" class="img_player" id="img_player">
+		<audio id="audioPlayer" ontimeupdate="update(this)"></audio>
 
 		<div class="lecture">
 			<span id="progressTime">0:00</span>
 			<div id="progressBarControl">
 		   		<div id="progressBar" onclick="clickProgress('audioPlayer', this, event)"></div>
 			</div>
+			<span id="time_song">0:00</span>
 			
 			<span class="volume">
 			    <a class="stick1" onclick="volume('audioPlayer', 0)"></a>
@@ -57,9 +61,8 @@
 		</div>
 	</div>
 
-	<button class="control play" onclick="play('audioPlayer', this)">
+	<button class="control play" id="play_pause" onclick="play('audioPlayer', this)">
 		<i class="fa fa-play" id="play" aria-hidden="true"></i>
-		<i class="fa fa-pause desactive" id="pause" aria-hidden="true"></i>
 	</button>
 
 	<div class="move-music">
@@ -72,5 +75,39 @@
 	</div>
 
 	<button onclick="autoplay('audioPlayer', this)"></button>
+	<button onclick="back_generation()">
+		<i class="fa fa-angle-left" aria-hidden="true"></i>
+	</button>
+	<button onclick="next_generation()">
+		<i class="fa fa-angle-right" aria-hidden="true"></i>
+	</button>
+	
+
+	<script>
+			function region()
+			{
+				switch(playlists[num_playlist])
+				{
+					case kanto:
+						document.body.style.background = 'url(img/kanto.png)'; 
+						playlist_nom.innerHTML = "Kanto";
+						break;
+					case hoenn:
+						document.body.style.background = 'url(img/hoenn.png)'; 
+						playlist_nom.innerHTML = "Hoenn";
+						break;
+					case sinnoh:
+						document.body.style.background = 'url(img/sinnoh.jpeg)'; 
+						playlist_nom.innerHTML = "Sinnoh";
+						break;
+					case johto:
+						document.body.style.background = 'url(img/johto.jpeg)'; 
+						playlist_nom.innerHTML = "Johto";
+						break;
+				}
+			}
+			region();
+
+	</script>
 </body>
 </html>
