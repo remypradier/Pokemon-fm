@@ -56,7 +56,6 @@ body
 /*Player audio*/
 .player
 {
-
     width: 22.8%;
     float: left;
     position: absolute;
@@ -208,7 +207,7 @@ body
 	float: right;
 }
 
-.play:hover, .backward:hover, .forward:hover
+.play:hover, .backward:hover, .forward:hover, .next_genereation:hover, .back_generation:hover 
 {
 	color: #ccc;
 }
@@ -230,51 +229,74 @@ body
 }
 
 
-		table, th, td 
-		{
-			border: 1px solid lightgrey;
-			border-collapse: collapse;
-			margin: 6%;
-		}
-		/*
-		table
-		{
-			width: 21.9%;
-			left: 56.3%;
-			top: 90px;
-			position: relative;
+table, th, td 
+{
+	border: 1px solid lightgrey;
+	border-collapse: collapse;
+	margin: 6%;
+}
 
-		
+/*
+table
+{
+	width: 21.9%;
+	left: 56.3%;
+	top: 90px;
+	position: relative;
 }*/
-		table img
-		{
-			width: 30%;
-		}
 
-		tbody
-		{
-			
-			
-			display: block;
-			height: 670px; /* a modifier*/
-			overflow-y: scroll;
-		}
+table img
+{
+	width: 30%;
+}
 
-		td
-		{
-			width: 20%;
-			color: #fff;
-			padding: 0.3%;
-			text-align: center;
-			font-size: 22px;
-		}
-		
-		tr
-		{
-			background: grey;
-		}
+tbody
+{
+	
+	
+	display: block;
+	height: 670px; /* a modifier*/
+	overflow-y: scroll;
+}
 
-		tr:nth-child(2n+1)
-		{
-			background: darkgrey;
-		}
+td
+{
+	width: 20%;
+	color: #fff;
+	padding: 0.3%;
+	text-align: center;
+	font-size: 22px;
+}
+
+tr
+{
+	background: grey;
+}
+
+tr:nth-child(2n+1)
+{
+	background: darkgrey;
+}
+
+.next_genereation, .back_generation 
+{
+	font-size: 4em;
+	color: #fff;
+	border: none;
+	background: none;
+	cursor: pointer;
+	position: absolute;
+	top: 45%;
+}
+
+.next_genereation
+{
+
+	right: 2%;
+}
+
+.back_generation
+{
+	left: 2%;
+
+}

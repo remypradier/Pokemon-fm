@@ -9,7 +9,7 @@
 	<script src="json/data.json"></script>
 </head>
 <body>
-	<div class='tableau'>
+	<!--<div class='tableau'>-->
 		<script type="text/javascript">
 			var chemin = "song/";
 			var chemin_img = "img/";
@@ -19,7 +19,7 @@
 			var playlist = playlists[num_playlist];
 
 			//Crée le tableau HTML
-			
+			/*
 			function afficher()
 			{
 				document.writeln("<table id='tableau'>");
@@ -31,11 +31,19 @@
 			}
 
 			afficher();
+			*/
 			
-
 		</script>
+	<!--</div>-->
+	
+	<div class="tableau">
+		<table>
+			<tbody id="music_playlist"></tbody>
+		</table>
 	</div>
 	
+		
+	</table>
 	<h1 class='playlist_nom' id='playlist_nom'>Aucune playlist sélectionnée</h1>;
 	<img src="img/pokedex.svg" class="pokedex">
 
@@ -75,38 +83,49 @@
 	</div>
 
 	<button onclick="autoplay('audioPlayer', this)"></button>
-	<button onclick="back_generation()">
-		<i class="fa fa-angle-left" aria-hidden="true"></i>
+	<button class="back_generation" onclick="back_generation()">
+		<!--<i class="fa fa-angle-left" aria-hidden="true"></i>-->
+		<i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
 	</button>
-	<button onclick="next_generation()">
-		<i class="fa fa-angle-right" aria-hidden="true"></i>
+	<button class="next_genereation" onclick="next_generation()">
+		<i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
 	</button>
 	
 
 	<script>
-			function region()
+		function region()
+		{
+			switch(playlists[num_playlist])
 			{
-				switch(playlists[num_playlist])
-				{
-					case kanto:
-						document.body.style.background = 'url(img/kanto.png)'; 
-						playlist_nom.innerHTML = "Kanto";
-						break;
-					case hoenn:
-						document.body.style.background = 'url(img/hoenn.png)'; 
-						playlist_nom.innerHTML = "Hoenn";
-						break;
-					case sinnoh:
-						document.body.style.background = 'url(img/sinnoh.jpeg)'; 
-						playlist_nom.innerHTML = "Sinnoh";
-						break;
-					case johto:
-						document.body.style.background = 'url(img/johto.jpeg)'; 
-						playlist_nom.innerHTML = "Johto";
-						break;
-				}
+				case kanto:
+					document.body.style.background = 'url(img/kanto.png)'; 
+					playlist_nom.innerHTML = "Kanto";
+					break;
+				case hoenn:
+					document.body.style.background = 'url(img/hoenn.png)'; 
+					playlist_nom.innerHTML = "Hoenn";
+					break;
+				case sinnoh:
+					document.body.style.background = 'url(img/sinnoh.jpeg)'; 
+					playlist_nom.innerHTML = "Sinnoh";
+					break;
+				case johto:
+					document.body.style.background = 'url(img/johto.jpeg)'; 
+					playlist_nom.innerHTML = "Johto";
+					break;
 			}
-			region();
+		}
+		region();
+
+		function tabtab()
+		{
+			console.log(playlist);
+			for(var i = 0; i < playlist.length; i++)
+			{			
+			music_playlist.innerHTML += "<tr><td>" + "<a href='"+ chemin +"'>" + playlist[i].nom + "</a></td><td>" + playlist[i].duree + "</td><td><img class='img_tableau' src='" + chemin_img + playlist[i].chemin_img + "'>"+ "</td><td class='mp3' id='mp3'>" + playlist[i].chemin + "</td></tr>";
+			}
+		}
+		tabtab();
 
 	</script>
 </body>

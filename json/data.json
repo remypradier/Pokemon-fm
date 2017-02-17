@@ -80,6 +80,28 @@ var kanto =
     }
 ];
 
-var hoenn = [];
-var sinnoh = [];
-var johto = [];
+var hoenn = [
+    {
+        nom: "hoenn",
+		duree: "2.22",
+		chemin: "hoenn.mp3",
+		chemin_img: "hoenn_vignette.png"
+    }
+];
+
+var sinnoh = [
+    {
+        nom: "sinnoh",
+		duree: "3.33",
+		chemin: "sinnoh.mp3",
+		chemin_img: "sinnoh_vignette.png"
+    }
+];
+var johto = [
+    {
+        nom: "johto",
+		duree: "4.44",
+		chemin: "johto.mp3",
+		chemin_img: "johto_vignette.png"
+    }
+];
