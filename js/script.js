@@ -127,7 +127,6 @@ function backward(idPlayer)
 {
     var player = document.querySelector('#' + idPlayer);
     track--;
-    //player.innerHTML = " <source src=" + chemin + playlist[track].chemin +" type='audio/ogg'>";//A corriger
     player.src = chemin + playlist[track].chemin;
     play('audioPlayer', this);
 }
@@ -136,7 +135,6 @@ function forward(idPlayer)
 {
     var player = document.querySelector('#' + idPlayer);
     track++;
-    //player.innerHTML = " <source src=" + chemin + playlist[track].chemin +" type='audio/ogg'>";//A corriger
     player.src = chemin + playlist[track].chemin;
     play('audioPlayer', this);
 }
@@ -154,6 +152,7 @@ function autoplay(idPlayer)
 
 }
 
+//Changer de generation
 function next_generation()
 {
     if(num_playlist >= 3)
@@ -181,4 +180,5 @@ function back_generation()
     }
     region();
 }
+
 
