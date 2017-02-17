@@ -1,5 +1,9 @@
 var track = 0;
 var maxtrack = 10;
+//var playlist = playlists[0];
+
+
+
 
 var player = document.querySelector('#audioPlayer');
 
@@ -7,6 +11,7 @@ function play(idPlayer, control)
 {
     var player = document.querySelector('#' + idPlayer);
 	console.log(track);
+    //title_player = document.querySelector("#title_player");
     /*
     console.log("play" + player.innerHTML);
     if(player.innerHTML.trim() == "")
@@ -16,16 +21,24 @@ function play(idPlayer, control)
     }
     */
 
+
     if (player.paused) 
     {
             player.src = chemin + playlist[track].chemin;
             player.load();
             player.play(); 
+            //Affiche les informations de la musique dans le player
+            title_player.innerHTML = playlist[track].nom;
+            img_player.src = "img/" + playlist[track].chemin_img;
+            time_song.innerHTML = playlist[track].duree;
+            play_pause.innerHTML = "<i class='fa fa-pause desactive' id='pause' aria-hidden='true'></i>";
+
 
     } 
     else 
     {
         player.pause(); 
+        play_pause.innerHTML = "<i class='fa fa-play desactive' id='play' aria-hidden='true'></i>";
     }
 }
 
@@ -134,10 +147,38 @@ function autoplay(idPlayer)
     while(track <= maxtrack)
     {
         player.src = chemin + playlist[track].chemin;
-        player.load();
-        player.play(); 
+        play(idPlayer);
         
         track++;
     }
 
 }
+
+function next_generation()
+{
+    if(num_playlist >= 3)
+    {
+        num_playlist = 0;
+
+    }
+    else
+    {
+        num_playlist++;
+    }
+    region();
+}
+
+function back_generation()
+{
+    if(num_playlist < 0)
+    {
+        num_playlist = 3;
+
+    }
+    else
+    {
+        num_playlist--;
+    }
+    region();
+}
+

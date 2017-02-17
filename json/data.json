@@ -1,18 +1,85 @@
-var playlist = [
-	{
-	    nom: "Azuria & Parmanie - kanto",
+var kanto = 
+[
+    {
+        nom: "Opening Theme",
+		duree: "1.59",
+		chemin: "opening_theme.mp3",
+		chemin_img: "kanto_vignette.png"
+    },
+    {
+        nom: "Theme principal",
+		duree: "1.45",
+		chemin: "theme_principal.mp3",
+		chemin_img: "kanto_vignette.png"
+    },
+    {
+        nom: "Azuria & Parmanie",
 		duree: "1.18",
-		chemin: "test.mp3",
-		chemin_img: "kanto.png",
-		gen: "kanto",
-        numero: "1"
-	},
-	{
-	    nom: "Bourg Palette - kanto",
+		chemin: "azuria_&_parmanie.mp3",
+		chemin_img: "kanto_vignette.png"
+    },
+    {
+        nom: "Bourg palette",
 		duree: "1.18",
-		chemin: "test2.mp3",
-		chemin_img: "kanto.png",
-		gen: "kanto",
-        numero: "2"
-	}
-]
+		chemin: "bourg_palette.mp3",
+		chemin_img: "kanto_vignette.png"
+    },
+    {
+        nom: "Carmin sur mer",
+		duree: "1.04",
+		chemin: "carmin_sur_mer.mp3",
+		chemin_img: "kanto_vignette.png"
+    },
+    {
+        nom: "Celadopole",
+		duree: "1.20",
+		chemin: "celadopole.mp3",
+		chemin_img: "kanto_vignette.png"
+    },
+    {
+        nom: "Cramois'ile",
+		duree: "1.00",
+		chemin: "cramois_ile.mp3",
+		chemin_img: "kanto_vignette.png"
+    },
+    {
+        nom: "Final battle VS rival",
+		duree: "2.33",
+		chemin: "final_battle_vs_rival.mp3",
+		chemin_img: "kanto_vignette.png"
+    },
+    {
+        nom: "Jadielle, Argentia, Safrania",
+		duree: "2.17",
+		chemin: "jadielle_argentia_safrania.mp3",
+		chemin_img: "kanto_vignette.png"
+    },
+    {
+        nom: "Lavanville",
+		duree: "1.49",
+		chemin: "lavanville.mp3",
+		chemin_img: "kanto_vignette.png"
+    },
+    {
+        nom: "Poke center",
+		duree: "1.11",
+		chemin: "poke_center.mp3",
+		chemin_img: "kanto_vignette.png"
+    },
+        {
+        nom: "Rival battle",
+		duree: "0.45",
+		chemin: "rival_battle.mp3",
+		chemin_img: "kanto_vignette.png"
+    },
+        {
+        nom: "Wild pokemon",
+		duree: "1.39",
+		chemin: "wild_pokemon.mp3",
+		chemin_img: "kanto_vignette.png"
+    }
+];
+
+var hoenn = [];
+var sinnoh = [];
+var johto = [];
