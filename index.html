@@ -9,41 +9,27 @@
 	<script src="json/data.json"></script>
 </head>
 <body>
-	<!--<div class='tableau'>-->
-		<script type="text/javascript">
-			var chemin = "song/";
-			var chemin_img = "img/";
-			var num_playlist = 0;
+	<script type="text/javascript">
+		//Variables chemins
+		var chemin = "song/";
+		var chemin_img = "img/";
 
-			var playlists = [kanto, hoenn, sinnoh, johto];
-			var playlist = playlists[num_playlist];
+		//Variable permettant de changer de playlist
+		var num_playlist = 0;
 
-			//Crée le tableau HTML
-			/*
-			function afficher()
-			{
-				document.writeln("<table id='tableau'>");
-				for(var i = 0; i < playlist.length; i++)
-				{
-					document.writeln("<tr><td>" + "<a href='"+ chemin +"'>" + playlist[i].nom + "</a></td><td>" + playlist[i].duree + "</td><td><img class='img_tableau' src='" + chemin_img + playlist[i].chemin_img + "'>"+ "</td><td class='mp3' id='mp3'>" + playlist[i].chemin + "</td></tr>"); 
-				}
-				document.writeln("</table>");
-			}
+		//Variable contenant les playlists
+		var playlists = [kanto, hoenn, sinnoh, johto];
 
-			afficher();
-			*/
-			
-		</script>
-	<!--</div>-->
+		//Variable qui recupère une playlist
+		var playlist = playlists[num_playlist];
+	</script>
 	
 	<div class="tableau">
 		<table>
 			<tbody id="music_playlist"></tbody>
 		</table>
 	</div>
-	
-		
-	</table>
+
 	<h1 class='playlist_nom' id='playlist_nom'>Aucune playlist sélectionnée</h1>;
 	<img src="img/pokedex.svg" class="pokedex">
 
@@ -92,6 +78,8 @@
 	
 
 	<script>
+	
+		//Fonction permettant de changer de fond, et de playlist
 		function region()
 		{
 			switch(playlists[num_playlist])
@@ -116,7 +104,8 @@
 		}
 		region();
 
-		function tabtab()
+		//Fonction permettant de créer le tableau
+		function tableau()
 		{
 			console.log(playlist);
 			for(var i = 0; i < playlist.length; i++)
@@ -124,7 +113,7 @@
 			music_playlist.innerHTML += "<tr><td class='read_music' onclick='play(&quot;audioPlayer&quot;, this)'>" + playlist[i].nom + "</td><td>" + playlist[i].duree + "</td><td class='img_tableau'><img src='" + chemin_img + playlist[i].chemin_img + "'>"+ "</td><td class='mp3' id='mp3'>" + playlist[i].chemin + "</td></tr>";
 			}
 		}
-		tabtab();
+		tableau();
 
 	</script>
 </body>
