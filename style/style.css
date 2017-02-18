@@ -102,9 +102,10 @@
 	opacity: 0;
 }
 
-.body_accueil span 
+.body_accueil h3 
 {
-	margin-left: 120px;
+	font-size: 1em;
+	text-align: center;
 }
 
 /*Page du player*/
