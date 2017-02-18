@@ -82,9 +82,8 @@
 		</button>
 	</div>
 
-	<button onclick="autoplay('audioPlayer', this)"></button>
+	<button class="autoplay" onclick="autoplay('audioPlayer', this)"></button>
 	<button class="back_generation" onclick="back_generation()">
-		<!--<i class="fa fa-angle-left" aria-hidden="true"></i>-->
 		<i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
 	</button>
 	<button class="next_genereation" onclick="next_generation()">
@@ -122,7 +121,7 @@
 			console.log(playlist);
 			for(var i = 0; i < playlist.length; i++)
 			{			
-			music_playlist.innerHTML += "<tr><td>" + "<a href='"+ chemin +"'>" + playlist[i].nom + "</a></td><td>" + playlist[i].duree + "</td><td class='img_tableau'><img src='" + chemin_img + playlist[i].chemin_img + "'>"+ "</td><td class='mp3' id='mp3'>" + playlist[i].chemin + "</td></tr>";
+			music_playlist.innerHTML += "<tr><td class='read_music' onclick='play(&quot;audioPlayer&quot;, this)'>" + playlist[i].nom + "</td><td>" + playlist[i].duree + "</td><td class='img_tableau'><img src='" + chemin_img + playlist[i].chemin_img + "'>"+ "</td><td class='mp3' id='mp3'>" + playlist[i].chemin + "</td></tr>";
 			}
 		}
 		tabtab();

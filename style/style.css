@@ -212,15 +212,22 @@ body
 	color: #ccc;
 }
 
+.autoplay
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 5%;
+	background: green;
+}
+
 .tableau
 {
 	position: absolute;
-	top: 14%;
-	left: 56.3%;
-	width: 22.8%;
+	top: 20%;
+	left: 56.25%;
+	width: 23%;
 	/*background: red;*/
-	border-radius: 14%;
-	max-height: 72.5%;
 }
 
 .mp3, .img_tableau
@@ -228,13 +235,18 @@ body
 	display: none;
 }
 
+.read_music:hover
+{
+	cursor: pointer;
+	color: #ccc;
+}
 
 table, th, td 
 {
 	border: 1px solid lightgrey;
 	border-collapse: collapse;
-	width: 88%;
-	margin: 6%;
+	width: 100%;
+	/*margin: 6%;*/
 }
 
 table img
@@ -245,15 +257,15 @@ table img
 tbody
 {
 	display: block;
-	max-height: 670px; /* a modifier*/
+	max-height: 580px; /* a modifier*/
 	overflow-y: scroll;
 }
 
 td
 {
-	width: 65%;
+	/*width: 65%;*/
 	color: #fff;
-	padding: 0.3%;
+	padding: 0.3% 0;
 	text-align: center;
 	font-size: 22px;
 
