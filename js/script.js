@@ -1,26 +1,10 @@
 var track = 0;
-var maxtrack = 10;
-//var playlist = playlists[0];
-
-
-
-
 var player = document.querySelector('#audioPlayer');
 
+//Fonction permettant de lire une musique
 function play(idPlayer, control) 
 {
     var player = document.querySelector('#' + idPlayer);
-	console.log(track);
-    //title_player = document.querySelector("#title_player");
-    /*
-    console.log("play" + player.innerHTML);
-    if(player.innerHTML.trim() == "")
-    {
-        player.innerHTML = " <source src=" + chemin + playlist[track].chemin +" type='audio/ogg'>";
-        console.log("trim" + player.innerHTML);
-    }
-    */
-
 
     if (player.paused) 
     {
@@ -31,17 +15,18 @@ function play(idPlayer, control)
             title_player.innerHTML = playlist[track].nom;
             img_player.src = "img/" + playlist[track].chemin_img;
             time_song.innerHTML = playlist[track].duree;
+            //Remplace le sympole play par pause
             play_pause.innerHTML = "<i class='fa fa-pause desactive' id='pause' aria-hidden='true'></i>";
-
-
     } 
     else 
     {
         player.pause(); 
+        //Remplace le sympole pause par play
         play_pause.innerHTML = "<i class='fa fa-play desactive' id='play' aria-hidden='true'></i>";
     }
 }
 
+//Fonction permettant de modifier le volume
 function volume(idPlayer, vol) 
 {
     var player = document.querySelector('#' + idPlayer);
@@ -49,6 +34,7 @@ function volume(idPlayer, vol)
     player.volume = vol;	
 }
 
+//Fonction permettant d'afficher la progression de la musique 
 function update(player) 
 {
     var duration = player.duration;    // Durée totale
@@ -86,7 +72,6 @@ function formatTime(time)
 }
 
 //Barre de progression cliquable
-
 function getMousePosition(event) 
 {
     return {
@@ -123,7 +108,7 @@ function clickProgress(idPlayer, control, event)
     player.currentTime = (duration * percent) / 100;
 }
 
-
+//Fonction permettant de passer à la musique précédente
 function backward(idPlayer) 
 {
     var player = document.querySelector('#' + idPlayer);
@@ -132,6 +117,7 @@ function backward(idPlayer)
     play('audioPlayer', this);
 }
 
+//Fonction permettant de passer à la musique suivante
 function forward(idPlayer) 
 {
     var player = document.querySelector('#' + idPlayer);
@@ -140,6 +126,7 @@ function forward(idPlayer)
     play('audioPlayer', this);
 }
 
+//Fonction permettant de lire la playlist automatiquement
 function autoplay(idPlayer)
 {
     var player = document.querySelector('#' + idPlayer);
@@ -152,27 +139,12 @@ function autoplay(idPlayer)
     }
 }
 
-//Changer de generation
-function next_generation()
-{
-    if(num_playlist >= 3)
-    {
-        num_playlist = 0;
-
-    }
-    else
-    {
-        num_playlist++;
-    }
-    region();
-}
-
+//Fonction permettant de passer à la génération précédente
 function back_generation()
 {
     if(num_playlist < 0)
     {
         num_playlist = 3;
-
     }
     else
     {
@@ -181,4 +153,16 @@ function back_generation()
     region();
 }
 
-
+//Fonction permettant de passer à la génération suivante
+function next_generation()
+{
+    if(num_playlist >= 3)
+    {
+        num_playlist = 0;
+    }
+    else
+    {
+        num_playlist++;
+    }
+    region();
+}
