@@ -412,4 +412,10 @@ tr:nth-child(2n+1)
 	{
 		display: block;
 	}
+	
+	body
+	{
+		overflow-x: hidden;
+		overflow-y: hidden;
+	}
 }
