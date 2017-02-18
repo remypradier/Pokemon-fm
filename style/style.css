@@ -61,7 +61,7 @@ body
     position: absolute;
     top: 28%;
     left: 21%;
-    background: red;
+    /*background: red;*/
     height: 44%;
     border-radius: 11.5%;
 }
@@ -227,8 +227,7 @@ body
 	top: 20%;
 	left: 56.25%;
 	width: 23%;
-	background: red;
-	border-radius: 14%;
+	/*background: red;*/
 }
 
 .mp3, .img_tableau
