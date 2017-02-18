@@ -142,7 +142,7 @@ function autoplay(idPlayer)
 //Fonction permettant de passer à la génération précédente
 function back_generation()
 {
-    if(num_playlist < 0)
+    if(num_playlist <= 0)
     {
         num_playlist = 3;
     }
@@ -150,7 +150,7 @@ function back_generation()
     {
         num_playlist--;
     }
-    region();
+    window.location.replace("player.html?numplaylist="+ num_playlist);
 }
 
 //Fonction permettant de passer à la génération suivante
@@ -164,5 +164,5 @@ function next_generation()
     {
         num_playlist++;
     }
-    region();
+    window.location.replace("player.html?numplaylist="+ num_playlist);
 }

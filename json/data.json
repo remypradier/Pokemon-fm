@@ -61,9 +61,9 @@ var kanto =
 		chemin_img: "kanto_vignette.png"
     },
     {
-        nom: "Poke center",
+        nom: "Pokemon center",
 		duree: "1.11",
-		chemin: "poke_center.mp3",
+		chemin: "pokemon_center.mp3",
 		chemin_img: "kanto_vignette.png"
     },
         {
@@ -80,28 +80,419 @@ var kanto =
     }
 ];
 
+var johto = [
+    {
+        nom: "Azalea town",
+		duree: "1:55",
+		chemin: "azalea_town.mp3",
+		chemin_img: "johto_vignette.png"
+    },
+    {
+        nom: "Champion lance & red battle",
+		duree: "2:01",
+		chemin: "champion_lance_&_red_battle.mp3",
+		chemin_img: "johto_vignette.png"
+    },
+    {
+        nom: "Cherrygrove city",
+		duree: "1:02",
+		chemin: "cherrygrove_city.mp3",
+		chemin_img: "johto_vignette.png"
+    },
+    {
+        nom: "Ecruteak city",
+		duree: "2:28",
+		chemin: "ecruteak_city.mp3",
+		chemin_img: "johto_vignette.png"
+    },
+    {
+        nom: "Evolution",
+		duree: "0:50",
+		chemin: "evolution.mp3",
+		chemin_img: "johto_vignette.png"
+    },
+    {
+        nom: "Goldenrod city",
+		duree: "1:25",
+		chemin: "goldenrod_city.mp3",
+		chemin_img: "johto_vignette.png"
+    },
+    {
+        nom: "Hall of fame",
+		duree: "1:00",
+		chemin: "Hall_of_fame.mp3",
+		chemin_img: "johto_vignette.png"
+    },
+    {
+        nom: "Main menu",
+		duree: "0:35",
+		chemin: "main_menu.mp3",
+		chemin_img: "johto_vignette.png"
+    },
+    {
+        nom: "New bark town",
+		duree: "1:30",
+		chemin: "New_bark_town.mp3",
+		chemin_img: "johto_vignette.png"
+    },
+    {
+        nom: "Opening",
+		duree: "0:45",
+		chemin: "opening.mp3",
+		chemin_img: "johto_vignette.png"
+    },
+    {
+        nom: "Pokemon center",
+		duree: "1:16",
+		chemin: "pokemon_center.mp3",
+		chemin_img: "johto_vignette.png"
+    },
+    {
+        nom: "Pokemon league",
+		duree: "1:17",
+		chemin: "pokemon_league.mp3",
+		chemin_img: "johto_vignette.png"
+    },
+    {
+        nom: "Rival battle",
+		duree: "2:15",
+		chemin: "rival_battle.mp3",
+		chemin_img: "johto_vignette.png"
+    },
+    {
+        nom: "Team rocket battle",
+		duree: "2:09",
+		chemin: "team_rocket_battle.mp3",
+		chemin_img: "johto_vignette.png"
+    },
+    {
+        nom: "Title screen",
+		duree: "1:28",
+		chemin: "title_screen.mp3",
+		chemin_img: "johto_vignette.png"
+    },
+    {
+        nom: "Trainer battle",
+		duree: "3.46",
+		chemin: "trainer_battle.mp3",
+		chemin_img: "johto_vignette.png"
+    },
+    {
+        nom: "Vermillion city",
+		duree: "1:34",
+		chemin: "vermillion_city.mp3",
+		chemin_img: "johto_vignette.png"
+    },
+    {
+        nom: "Victory road",
+		duree: "0.51",
+		chemin: "victory_road.mp3",
+		chemin_img: "johto_vignette.png"
+    },
+    {
+        nom: "Victory! trainer",
+		duree: "0.36",
+		chemin: "victory!_trainer.mp3",
+		chemin_img: "johto_vignette.png"
+    },
+    {
+        nom: "Victory! wild pokemon",
+		duree: "0:37",
+		chemin: "victory!_wild_pokemon.mp3",
+		chemin_img: "johto_vignette.png"
+    },
+    {
+        nom: "Violet city",
+		duree: "1:31",
+		chemin: "violet_city.mp3",
+		chemin_img: "johto_vignette.png"
+    },
+    {
+        nom: "Wild pokemon battle (day)",
+		duree: "1:41",
+		chemin: "wild_pokemon_battle_(day).mp3",
+		chemin_img: "johto_vignette.png"
+    }
+];
+
 var hoenn = [
     {
-        nom: "hoenn",
-		duree: "2.22",
-		chemin: "hoenn.mp3",
+        nom: "Petalsburg city",
+		duree: "0:58",
+		chemin: "petalsburg_city.mp3",
+		chemin_img: "hoenn_vignette.png"
+    },
+    {
+        nom: "Dewford town",
+		duree: "2:33",
+		chemin: "dewford_town.mp3",
+		chemin_img: "hoenn_vignette.png"
+    },
+    {
+        nom: "Ever grande city",
+		duree: "1:59",
+		chemin: "Ever_grande_city.mp3",
+		chemin_img: "hoenn_vignette.png"
+    },
+    {
+        nom: "Fallabor town",
+		duree: "2:05",
+		chemin: "fallabor_town.mp3",
+		chemin_img: "hoenn_vignette.png"
+    },
+    {
+        nom: "Fortree",
+		duree: "1:17",
+		chemin: "fortree.mp3",
+		chemin_img: "hoenn_vignette.png"
+    },
+    {
+        nom: "Legendary",
+		duree: "1:29",
+		chemin: "legendary.mp3",
+		chemin_img: "hoenn_vignette.png"
+    },
+    {
+        nom: "Littleroot town",
+		duree: "2:02",
+		chemin: "littleroot_town.mp3",
+		chemin_img: "hoenn_vignette.png"
+    },
+    {
+        nom: "Lilycove city",
+		duree: "1:59",
+		chemin: "lilycove_city.mp3",
+		chemin_img: "hoenn_vignette.png"
+    },
+    {
+        nom: "Oldale town",
+		duree: "1:35",
+		chemin: "oldale_town.mp3",
+		chemin_img: "hoenn_vignette.png"
+    },
+    {
+        nom: "Opening selection",
+		duree: "1:59",
+		chemin: "opening_selection.mp3",
+		chemin_img: "hoenn_vignette.png"
+    },
+    {
+        nom: "Opening theme",
+		duree: "1.38",
+		chemin: "opening_theme.mp3",
+		chemin_img: "hoenn_vignette.png"
+    },
+    {
+        nom: "Pokemart",
+		duree: "1:38",
+		chemin: "pokemart.mp3",
+		chemin_img: "hoenn_vignette.png"
+    },
+    {
+        nom: "Pokemon center",
+		duree: "1:29",
+		chemin: "pokemon_center.mp3",
+		chemin_img: "hoenn_vignette.png"
+    },
+    {
+        nom: "Rival battle",
+		duree: "3:00",
+		chemin: "rival_battle.mp3",
+		chemin_img: "hoenn_vignette.png"
+    },
+    {
+        nom: "Rustboro city",
+		duree: "2:16",
+		chemin: "rustboro_city.mp3",
+		chemin_img: "hoenn_vignette.png"
+    },
+    {
+        nom: "Slateport city",
+		duree: "3:35",
+		chemin: "slateport_city.mp3",
+		chemin_img: "hoenn_vignette.png"
+    },
+    {
+        nom: "Team magma & team aqua battle",
+		duree: "3:26",
+		chemin: "Team_magma_&_team_aqua_battle.mp3",
+		chemin_img: "hoenn_vignette.png"
+    },
+    {
+        nom: "Verdanturf town",
+		duree: "1:39",
+		chemin: "verdanturf_town.mp3",
+		chemin_img: "hoenn_vignette.png"
+    },
+    {
+        nom: "Viridian  city",
+		duree: "2:33",
+		chemin: "viridian_city.mp3",
+		chemin_img: "hoenn_vignette.png"
+    },
+    {
+        nom: "Wild pokemon",
+		duree: "1:45",
+		chemin: "wild_pokemon.mp3",
 		chemin_img: "hoenn_vignette.png"
     }
 ];
 
 var sinnoh = [
     {
-        nom: "sinnoh",
-		duree: "3.33",
-		chemin: "sinnoh.mp3",
+        nom: "Canalave city (day)",
+		duree: "3:02",
+		chemin: "Canalave_city_(day).mp3",
 		chemin_img: "sinnoh_vignette.png"
-    }
-];
-var johto = [
+    },
     {
-        nom: "johto",
-		duree: "4.44",
-		chemin: "johto.mp3",
-		chemin_img: "johto_vignette.png"
+        nom: "Ending",
+		duree: "4:39",
+		chemin: "ending.mp3",
+		chemin_img: "sinnoh_vignette.png"
+    },
+    {
+        nom: "Eterna city (day)",
+		duree: "3:48",
+		chemin: "eterna_city_(day).mp3",
+		chemin_img: "sinnoh_vignette.png"
+    },
+    {
+        nom: "Evolution",
+		duree: "0:59",
+		chemin: "evolution.mp3",
+		chemin_img: "sinnoh_vignette.png"
+    },
+    {
+        nom: "Floaroma town (day)",
+		duree: "2:53",
+		chemin: "floaroma_town_(day).mp3",
+		chemin_img: "sinnoh_vignette.png"
+    },
+    {
+        nom: "Hearthome city (day)",
+		duree: "2:27",
+		chemin: "hearthome_city_(day).mp3",
+		chemin_img: "sinnoh_vignette.png"
+    },
+    {
+        nom: "Jubilife city (day)",
+		duree: "1:57",
+		chemin: "jubilife_city_(day).mp3",
+		chemin_img: "sinnoh_vignette.png"
+    },
+    {
+        nom: "Opening selection",
+		duree: "2:40",
+		chemin: "opening_selection.mp3",
+		chemin_img: "sinnoh_vignette.png"
+    },
+    {
+        nom: "Oreburgh city (day)",
+		duree: "1:42",
+		chemin: "oreburgh_city_(day).mp3",
+		chemin_img: "sinnoh_vignette.png"
+    },
+    {
+        nom: "pokemart",
+		duree: "1:49",
+		chemin: "pokemart.mp3",
+		chemin_img: "sinnoh_vignette.png"
+    },
+    {
+        nom: "Pokemon center (day)",
+		duree: "1:42",
+		chemin: "pokemon_center_(day).mp3",
+		chemin_img: "sinnoh_vignette.png"
+    },
+    {
+        nom: "Pokemon league building",
+		duree: "2:55",
+		chemin: "pokemon_league_building.mp3",
+		chemin_img: "sinnoh_vignette.png"
+    },
+    {
+        nom: "Rival battle",
+		duree: "2:22",
+		chemin: "rival_battle.mp3",
+		chemin_img: "sinnoh_vignette.png"
+    },
+    {
+        nom: "Sandgem town (day)",
+		duree: "2:12",
+		chemin: "sandgem_town_(day).mp3",
+		chemin_img: "sinnoh_vignette.png"
+    },
+    {
+        nom: "Snowpoint city (day)",
+		duree: "4:09",
+		chemin: "snowpoint_city_(day).mp3",
+		chemin_img: "sinnoh_vignette.png"
+    },
+    {
+        nom: "Solaceon town (day)",
+		duree: "2:02",
+		chemin: "solaceon_town_(day).mp3",
+		chemin_img: "sinnoh_vignette.png"
+    },
+    {
+        nom: "Sunnyshore city (day)",
+		duree: "3:04",
+		chemin: "sunnyshore_city_(day).mp3",
+		chemin_img: "sinnoh_vignette.png"
+    },
+    {
+        nom: "Team galactic grunt battle",
+		duree: "2:40",
+		chemin: "Team_galactic_grunt_battle.mp3",
+		chemin_img: "sinnoh_vignette.png"
+    },
+    {
+        nom: "Trainer battle",
+		duree: "3:25",
+		chemin: "trainer_battle.mp3",
+		chemin_img: "sinnoh_vignette.png"
+    },
+    {
+        nom: "Twinleaf town (day)",
+		duree: "2:47",
+		chemin: "twinleaf_town_(day).mp3",
+		chemin_img: "sinnoh_vignette.png"
+    },
+    {
+        nom: "Veilstone city (day)",
+		duree: "3:19",
+		chemin: "veilstone_city_(day).mp3",
+		chemin_img: "sinnoh_vignette.png"
+    },
+    {
+        nom: "Victory road",
+		duree: "1:32",
+		chemin: "victory_road.mp3",
+		chemin_img: "sinnoh_vignette.png"
+    },
+    {
+        nom: "Victory! team galactic",
+		duree: "0:33",
+		chemin: "victory!_team_galactic.mp3",
+		chemin_img: "sinnoh_vignette.png"
+    },
+    {
+        nom: "Victory! trainer",
+		duree: "0:43",
+		chemin: "victory!_trainer.mp3",
+		chemin_img: "sinnoh_vignette.png"
+    },
+    {
+        nom: "Victory! wild pokemon",
+		duree: "0:35",
+		chemin: "victory!_wild_pokemon.mp3",
+		chemin_img: "sinnoh_vignette.png"
+    },
+    {
+        nom: "Wild pokemon battle",
+		duree: "2:27",
+		chemin: "wild_pokemon_battle.mp3",
+		chemin_img: "sinnoh_vignette.png"
     }
 ];
