@@ -1,120 +1,45 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Pokemon fm</title>
+	<title>pokemon</title>
 	<link rel="stylesheet" type="text/css" href="style/style.css">
-	<link rel="stylesheet" href="style/font-awesome.min.css">
-	<script type="text/javascript" src="js/script.js"></script>
-	<script src="json/data.json"></script>
 </head>
-<body>
-	<script type="text/javascript">
-		//Variables chemins
-		var chemin = "song/";
-		var chemin_img = "img/";
+<body class="body_accueil">
 
-		//Variable permettant de changer de playlist
-		var num_playlist = 0;
-
-		//Variable contenant les playlists
-		var playlists = [kanto, hoenn, sinnoh, johto];
-
-		//Variable qui recupère une playlist
-		var playlist = playlists[num_playlist];
-	</script>
-	
-	<div class="tableau">
-		<table>
-			<tbody id="music_playlist"></tbody>
-		</table>
+	<!-- Accueil -->
+	<div class="top">
+		<div class="bg"></div>
 	</div>
-
-	<h1 class='playlist_nom' id='playlist_nom'>Aucune playlist sélectionnée</h1>;
-	<img src="img/pokedex.svg" class="pokedex">
-
-	<div class="player">
-		<h2 class="title_player" id="title_player">Aucune musique sélectionnée</h2>
-		<img src="img/default.png" class="img_player" id="img_player">
-		<audio id="audioPlayer" ontimeupdate="update(this)"></audio>
-
-		<div class="lecture">
-			<span id="progressTime">0:00</span>
-			<div id="progressBarControl">
-		   		<div id="progressBar" onclick="clickProgress('audioPlayer', this, event)"></div>
-			</div>
-			<span id="time_song">0:00</span>
-			
-			<span class="volume">
-			    <a class="stick1" onclick="volume('audioPlayer', 0)"></a>
-			    <a class="stick2" onclick="volume('audioPlayer', 0.3)"></a>
-			    <a class="stick3" onclick="volume('audioPlayer', 0.5)"></a>
-			    <a class="stick4" onclick="volume('audioPlayer', 0.7)"></a>
-			    <a class="stick5" onclick="volume('audioPlayer', 1)"></a>
-			</span>
-		</div>
+	<div class="bottom">
+		<div class="bg"></div>
 	</div>
+	<button class="poke_gate"></button>
 
-	<button class="control play" id="play_pause" onclick="play('audioPlayer', this)">
-		<i class="fa fa-play" id="play" aria-hidden="true"></i>
-	</button>
+	<!-- Choix de la région -->
+	<a href="player.html?numplaylist=0"><div class="region"><span>Kanto</span></div></a>
+	<a href="player.html?numplaylist=1"><div class="region"><span>Johto</span></div></a>
+	<a href="player.html?numplaylist=2"><div class="region"><span>Hoenn</span></div></a>
+	<a href="player.html?numplaylist=3"><div class="region"><span>Sinnoh</span></div></a>
 
-	<div class="move-music">
-		<button class="backward" onclick="backward('audioPlayer', this)">
-			<i class="fa fa-step-backward" aria-hidden="true"></i>
-		</button>
-		<button class="forward" onclick="forward('audioPlayer', this)"> 
-			<i class="fa fa-step-forward" aria-hidden="true"></i>
-		</button>
-	</div>
-
-	<button class="autoplay" onclick="autoplay('audioPlayer', this)"></button>
-	<button class="back_generation" onclick="back_generation()">
-		<i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
-	</button>
-	<button class="next_genereation" onclick="next_generation()">
-		<i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-	</button>
-	
-
-	<script>
-	
-		//Fonction permettant de changer de fond, et de playlist
-		function region()
-		{
-			switch(playlists[num_playlist])
-			{
-				case kanto:
-					document.body.style.background = 'url(img/kanto.jpg)'; 
-					playlist_nom.innerHTML = "Kanto";
-					break;
-				case hoenn:
-					document.body.style.background = 'url(img/hoenn.jpg)'; 
-					playlist_nom.innerHTML = "Hoenn";
-					break;
-				case sinnoh:
-					document.body.style.background = 'url(img/sinnoh.jpg)'; 
-					playlist_nom.innerHTML = "Sinnoh";
-					break;
-				case johto:
-					document.body.style.background = 'url(img/johto.jpg)'; 
-					playlist_nom.innerHTML = "Johto";
-					break;
-			}
-		}
-		region();
-
-		//Fonction permettant de créer le tableau
-		function tableau()
-		{
-			console.log(playlist);
-			for(var i = 0; i < playlist.length; i++)
-			{			
-			music_playlist.innerHTML += "<tr><td class='read_music' onclick='play(&quot;audioPlayer&quot;, this)'>" + playlist[i].nom + "</td><td>" + playlist[i].duree + "</td><td class='img_tableau'><img src='" + chemin_img + playlist[i].chemin_img + "'>"+ "</td><td class='mp3' id='mp3'>" + playlist[i].chemin + "</td></tr>";
-			}
-		}
-		tableau();
-
-	</script>
 </body>
+<script type="text/javascript">
+	var divHaut = document.querySelector('.top');
+	var divBas = document.querySelector('.bottom');
+	var btn = document.querySelector('button');
+
+	btn.addEventListener('click', function () 
+	{
+		if (divHaut.style.top === '') 
+		{
+		divHaut.style.top = '-50%';
+		divBas.style.bottom = '-50%';
+		} 
+		if (btn.style.display = 'inline') 
+		{
+			btn.style.display = 'none';
+			btn.style.cursor = 'initial';
+		}
+	});
+</script>
 </html>
