@@ -53,7 +53,7 @@
 	</script>
 	
 	<div class="tableau">
-		<table>
+		<table id="tableId">
 			<tbody id="music_playlist"></tbody>
 		</table>
 	</div>
@@ -137,7 +137,6 @@
 		//Fonction permettant de créer le tableau
 		function tableau()
 		{
-			console.log(playlist);
 			for(var i = 0; i < playlist.length; i++)
 			{			
 			music_playlist.innerHTML += "<tr><td class='read_music' onclick='play(&quot;audioPlayer&quot;, this)'>" + playlist[i].nom + "</td><td>" + playlist[i].duree + "</td><td class='img_tableau'><img src='" + chemin_img + playlist[i].chemin_img + "'>"+ "</td><td class='mp3' id='mp3'>" + playlist[i].chemin + "</td></tr>";
@@ -145,6 +144,7 @@
 		}
 		tableau();
 
+		var maxtrack = document.getElementById("tableId").getElementsByTagName("tbody")[0].getElementsByTagName("tr").length;
 	</script>
 </body>
 </html>

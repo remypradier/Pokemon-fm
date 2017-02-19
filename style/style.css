@@ -292,7 +292,7 @@
 	float: right;
 }
 
-.play:hover, .backward:hover, .forward:hover, .next_genereation:hover, .back_generation:hover 
+.play:hover, .backward:hover, .forward:hover, .next_genereation:hover, .back_generation:hover
 {
 	color: #ccc;
 }
@@ -300,10 +300,19 @@
 .autoplay
 {
 	position: absolute;
-	top: 0;
-	left: 0;
-	width: 5%;
-	background: green;
+	top: 84.5%;
+	left: 25.5%;
+	width: 4.5%;
+	background: #59db2e;
+	padding: 0.5% 0;
+	border-radius: 33%;
+	border: none;
+	cursor: pointer;
+}
+
+.autoplay:hover
+{
+	background: #ccc;
 }
 
 .tableau
@@ -412,4 +421,11 @@ tr:nth-child(2n+1)
 	{
 		display: block;
 	}
+
+	body
+	{
+		overflow-x: hidden;
+		overflow-y: hidden;
+	}
 }
+

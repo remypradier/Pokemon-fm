@@ -1,27 +1,29 @@
 var track = 0;
+
 var player = document.querySelector('#audioPlayer');
 
 //Fonction permettant de lire une musique
 function play(idPlayer, control) 
 {
+
     var player = document.querySelector('#' + idPlayer);
 
     if (player.paused) 
     {
-            player.src = chemin + playlist[track].chemin;
-            player.load();
-            player.play(); 
-            //Affiche les informations de la musique dans le player
-            title_player.innerHTML = playlist[track].nom;
-            img_player.src = "img/" + playlist[track].chemin_img;
-            time_song.innerHTML = playlist[track].duree;
-            //Remplace le sympole play par pause
-            play_pause.innerHTML = "<i class='fa fa-pause desactive' id='pause' aria-hidden='true'></i>";
+        player.src = chemin + playlist[track].chemin;
+        player.load();
+        player.play(); 
+        //Affiche les informations de la musique dans le player
+        title_player.innerHTML = playlist[track].nom;
+        img_player.src = "img/" + playlist[track].chemin_img;
+        time_song.innerHTML = playlist[track].duree;
+        //Remplace le symbole play par pause
+        play_pause.innerHTML = "<i class='fa fa-pause desactive' id='pause' aria-hidden='true'></i>";
     } 
     else 
     {
         player.pause(); 
-        //Remplace le sympole pause par play
+        //Remplace le symbole pause par play
         play_pause.innerHTML = "<i class='fa fa-play desactive' id='play' aria-hidden='true'></i>";
     }
 }
@@ -56,17 +58,20 @@ function formatTime(time)
     var mins  = Math.floor((time % 3600) / 60);
     var secs  = Math.floor(time % 60);
 	
-    if (secs < 10) {
+    if (secs < 10) 
+    {
         secs = "0" + secs;
     }
-	
-    if (hours) {
-        if (mins < 10) {
+    if (hours) 
+    {
+        if (mins < 10) 
+        {
             mins = "0" + mins;
         }
-		
         return hours + ":" + mins + ":" + secs; // hh:mm:ss
-    } else {
+    } 
+    else 
+    {
         return mins + ":" + secs; // mm:ss
     }
 }
@@ -129,14 +134,38 @@ function forward(idPlayer)
 //Fonction permettant de lire la playlist automatiquement
 function autoplay(idPlayer)
 {
+
     var player = document.querySelector('#' + idPlayer);
-    while(track <= maxtrack)
+
+    play('audioPlayer', this);
+    var interval = count_seconds(playlist[track].duree);
+    track++
+
+    function autoplay_interval() 
     {
-        player.src = chemin + playlist[track].chemin;
-        play(idPlayer);
-        
-        track++;
+        if(track < maxtrack)
+        {
+            player.src = chemin + playlist[track].chemin;
+            player.load();
+            player.play(); 
+
+            title_player.innerHTML = playlist[track].nom;
+            img_player.src = "img/" + playlist[track].chemin_img;
+            time_song.innerHTML = playlist[track].duree;
+            //Remplace le symbole play par pause
+            play_pause.innerHTML = "<i class='fa fa-pause desactive' id='pause' aria-hidden='true'></i>";
+            interval = count_seconds(playlist[track].duree);
+            track++
+            setTimeout(autoplay_interval, interval);
+        }
+        else
+        {
+            track = 0;
+            reset();
+            return;
+        }
     }
+    setTimeout(autoplay_interval, interval);
 }
 
 //Fonction permettant de passer à la génération précédente
@@ -165,4 +194,20 @@ function next_generation()
         num_playlist++;
     }
     window.location.replace("player.html?numplaylist="+ num_playlist);
+}
+
+//Fonction permettant de réinitialiser le player
+function reset()
+{
+    title_player.innerHTML = "Aucune musique sélectionnée";
+    img_player.src = "img/default.png";
+    time_song.innerHTML = "0:00";
+}
+
+//Fonction permettant de convertir la durée de la musique en seconde
+function count_seconds(duree)
+{
+    var seconds = ("00:" + duree).split(":");
+    var time_interval = (+seconds[0]) * 60 * 60 + (+seconds[1]) * 60 + (+seconds[2]); 
+    return time_interval*1000;
 }
