@@ -7,6 +7,15 @@
 	<link rel="stylesheet" href="style/font-awesome.min.css">
 	<script type="text/javascript" src="js/script.js"></script>
 	<script src="json/data.json"></script>
+	<style>
+		.image_test{
+			background-image: url('img/pokedex.svg');
+			background-repeat: no-repeat;
+			width: 1300px;
+			height: 850px;
+			margin: 0 auto;
+		}
+	</style>
 </head>
 <body class="body_player">
 	<script type="text/javascript">
@@ -51,7 +60,7 @@
 		//Variable qui recupère une playlist
 		var playlist = playlists[num_playlist];
 	</script>
-	
+
 	<div class="tableau">
 		<table id="tableId">
 			<tbody id="music_playlist"></tbody>
@@ -59,7 +68,11 @@
 	</div>
 
 	<h1 class='playlist_nom' id='playlist_nom'>Aucune playlist sélectionnée</h1>;
-	<img src="img/pokedex.svg" class="pokedex">
+
+	<!--<img src="img/pokedex.svg" class="pokedex">-->
+	<div id="map" class="image_test">
+
+	</div>
 
 	<div class="player">
 		<h2 class="title_player" id="title_player">Aucune musique sélectionnée</h2>
@@ -72,7 +85,7 @@
 		   		<div id="progressBar" onclick="clickProgress('audioPlayer', this, event)"></div>
 			</div>
 			<span id="time_song">0:00</span>
-			
+
 			<span class="volume">
 			    <a class="stick1" onclick="volume('audioPlayer', 0)"></a>
 			    <a class="stick2" onclick="volume('audioPlayer', 0.3)"></a>
@@ -91,7 +104,7 @@
 		<button class="backward" onclick="backward('audioPlayer', this)">
 			<i class="fa fa-step-backward" aria-hidden="true"></i>
 		</button>
-		<button class="forward" onclick="forward('audioPlayer', this)"> 
+		<button class="forward" onclick="forward('audioPlayer', this)">
 			<i class="fa fa-step-forward" aria-hidden="true"></i>
 		</button>
 	</div>
@@ -103,31 +116,42 @@
 	<button class="next_genereation" onclick="next_generation()">
 		<i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
 	</button>
-	
+
 	<div class="window_size">
 		<h2>Fenêtre trop petite</h2>
 	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/raphael.min.js"></script>
+	<script type="text/javascript" src="js/pokedex.js"></script>
 	<script>
-	
+		/*
+				for (var i = 0; i < boutons.length; i++)
+				{
+				    if (regions[i].data('id') == 'test') {
+				        regions[i].node.setAttribute('fill', 'red');
+				    }
+				}
+	  */
+
 		//Fonction permettant de changer de fond, et de playlist
 		function region()
 		{
 			switch(playlists[num_playlist])
 			{
 				case kanto:
-					document.body.style.background = 'url(img/kanto.jpg)'; 
+					document.body.style.background = 'url(img/kanto.jpg)';
 					playlist_nom.innerHTML = "Kanto";
 					break;
 				case hoenn:
-					document.body.style.background = 'url(img/hoenn.jpg)'; 
+					document.body.style.background = 'url(img/hoenn.jpg)';
 					playlist_nom.innerHTML = "Hoenn";
 					break;
 				case sinnoh:
-					document.body.style.background = 'url(img/sinnoh.jpg)'; 
+					document.body.style.background = 'url(img/sinnoh.jpg)';
 					playlist_nom.innerHTML = "Sinnoh";
 					break;
 				case johto:
-					document.body.style.background = 'url(img/johto.jpg)'; 
+					document.body.style.background = 'url(img/johto.jpg)';
 					playlist_nom.innerHTML = "Johto";
 					break;
 			}
@@ -138,7 +162,7 @@
 		function tableau()
 		{
 			for(var i = 0; i < playlist.length; i++)
-			{			
+			{
 			music_playlist.innerHTML += "<tr><td class='read_music' onclick='play(&quot;audioPlayer&quot;, this)'>" + playlist[i].nom + "</td><td>" + playlist[i].duree + "</td><td class='img_tableau'><img src='" + chemin_img + playlist[i].chemin_img + "'>"+ "</td><td class='mp3' id='mp3'>" + playlist[i].chemin + "</td></tr>";
 			}
 		}
