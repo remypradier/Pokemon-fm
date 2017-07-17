@@ -28,18 +28,21 @@
 	var divBas = document.querySelector('.bottom');
 	var btn = document.querySelector('button');
 
-	btn.addEventListener('click', function () 
+	btn.addEventListener('click', function ()
 	{
-		if (divHaut.style.top === '') 
+		if (divHaut.style.top === '')
 		{
 		divHaut.style.top = '-50%';
 		divBas.style.bottom = '-50%';
-		} 
-		if (btn.style.display = 'inline') 
+		}
+		if (btn.style.display = 'inline')
 		{
 			btn.style.display = 'none';
 			btn.style.cursor = 'initial';
 		}
 	});
 </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/raphael-min.js"></script>
+<script type="text/javascript" src="js/pokedex.js"></script>
 </html>
